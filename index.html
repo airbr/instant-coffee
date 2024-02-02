@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Instant Coffee</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="A test fast loading page">
-
-  <meta property="og:title" content="Instant Coffee with HTMX">
+  <meta name="description" content="Load some Coffee near instantly">
+  <meta property="og:title" content="Instant Coffee">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://instant-coffee-htmx.netlify.app/">
   <!-- <meta property="og:image" content=""> -->
@@ -22,6 +21,7 @@
   <script src="/js/htmx.min.js"></script>
   <link rel="stylesheet" href="/css/missing.min.css">
   <script src="/js/preload.js"></script>
+
   <style>
     main {
       display: flex;
@@ -83,16 +83,58 @@
     h1 {
       text-align: center;
     }
+    main {
+      background-image: url(img/mike-kenneally-TD4DBagg2wE-unsplash.jpg);
+      color: whitesmoke;
+    }
+    .bounce {
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 0.5s infinite linear;
+  -o-animation: bounce 0.5s infinite linear;
+  -webkit-animation: bounce 0.5s infinite linear;
+  animation: bounce 0.5s infinite linear;
+}
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
   </style>
 </head>
 
 <body>
   <main hx-boost="true" hx-ext="preload">
     <a href="/instant-coffee.html" preload="preload:init" preload-images="true">
-    <section class="repeatingStripes">
+    <section id="demo" class="bounce repeatingStripes">
     </section>
     </a>
-    <h1>Click the bullseye for instantly loaded Coffee</h1>
+    <h1>Click for coffee</h1>
   </main>
 </body>
 
