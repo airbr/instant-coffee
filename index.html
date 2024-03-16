@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instant Coffee</title>
+  <title>3rd Annual Bellingam Coffee Crawl - Saturday May 18 2024</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="Load some Coffee near instantly">
-  <meta property="og:title" content="Instant Coffee">
+  <meta name="description" content="3rd Annual Bellingham Coffee Crawl - Saturday May 18 2024">
+  <meta property="og:title" content="3rd Annual Bellingham Coffee Crawl">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://coffeecrawl2024.netlify.app/">
   <!-- <meta property="og:image" content=""> -->
@@ -19,7 +19,7 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
   <script src="/js/htmx.min.js"></script>
-  <link rel="stylesheet" href="/css/missing.min.css">
+  <!-- <link rel="stylesheet" href="/css/missing.min.css"> -->
   <script src="/js/preload.js"></script>
 
   <style>
@@ -29,9 +29,20 @@
       align-items: center;
       min-height: 100vh;
       flex-direction: column;
+      text-align: center;
     }
 
-    #photos {
+    .instant-headline {
+      font-size: large;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+    }
+
+    header {
+      background: #ccc6b0;
+    }
+
+    .photos {
       /* Prevent vertical gaps */
       line-height: 0;
       -webkit-column-count: 5;
@@ -44,33 +55,34 @@
       min-width: 100vw;  
     }
 
-    #photos img {
+    .photos img {
       /* Just in case there are inline attributes */
       max-width: 100% !important;
       height: auto !important;
     }
     @media (max-width: 1000px) {
-      #photos {
+      .photos {
       -moz-column-count:    3;
       -webkit-column-count: 3;
       column-count:         3;
       }
     }
     @media (max-width: 800px) {
-      #photos {
+      .photos {
       -moz-column-count:    2;
       -webkit-column-count: 2;
       column-count:         2;
       }
     }
     @media (max-width: 400px) {
-      #photos {
+      .photos {
       -moz-column-count:    1;
       -webkit-column-count: 1;
       column-count:         1;
       }
     }
     .repeatingStripes {
+      box-shadow: 10px 5px 5px black;
       width:  300px;
       height: 300px;
       border-radius: 150px;
@@ -80,13 +92,10 @@
         #FFF1BC 20px,
         #FFF1BC 40px);
     }
-    h1 {
-      text-align: center;
-    }
-    main {
+    /* main {
       background-image: url(img/mike-kenneally-TD4DBagg2wE-unsplash.jpg);
       color: whitesmoke;
-    }
+    } */
     .bounce {
   display: inline-block;
   position: relative;
@@ -125,6 +134,18 @@
     70% { top: -0.3em; }
     100% { top: 0; }
 }
+
+aside {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+aside.map {
+  background-image: url(img/mike-kenneally-TD4DBagg2wE-unsplash.jpg);
+
+}
   </style>
 </head>
 
@@ -134,7 +155,7 @@
     <section id="demo" class="bounce repeatingStripes">
     </section>
     </a>
-    <h1>Click for Coffee</h1>
+    <h1>Click for the 3rd Annual Bellingham Coffee Crawl 🗺️</h1>
   </main>
 </body>
 
