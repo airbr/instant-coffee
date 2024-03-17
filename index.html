@@ -10,11 +10,10 @@
   <meta property="og:title" content="Bellingham Coffee Crawl">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://coffeecrawl2024.netlify.app/">
-  <meta property="og:image" content="https://coffeecrawl2024.netlify.app/img/jocelyn-morales-JJeb7OHQ7a8-unsplash.jpg">
+  <meta property="og:image" content="https://coffeecrawl2024.netlify.app/img/walking-map.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
   <script src="/js/htmx.min.js"></script>
@@ -150,6 +149,28 @@ aside.map {
 }
 body {
   background-color: whitesmoke;
+}
+
+details {
+  background-color: whitesmoke;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
 }
   </style>
 </head>
