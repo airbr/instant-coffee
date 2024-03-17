@@ -1,0 +1,1 @@
+![lighthouse test](/img/lighthouse.png)
