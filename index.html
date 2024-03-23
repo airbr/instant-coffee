@@ -36,7 +36,6 @@
       justify-content: center;
       display: flex;
       font-size: large;
-      font-family: Arial, Helvetica, sans-serif;
       padding: 20px;
     }
 
@@ -141,7 +140,9 @@ aside {
   flex-direction: column;
 }
 aside.map {
-  background-image: url(img/mike-kenneally-TD4DBagg2wE-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/img/rizky-subagja-1k7TnX5GAww-unsplash.jpg);
 }
 body {
   background-color: whitesmoke;
@@ -168,7 +169,20 @@ details[open] summary {
   border-bottom: 1px solid #aaa;
   margin-bottom: 0.5em;
 }
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
   </style>
+
+<!-- HTML in your document's head -->
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
 </head>
 
 <body>
