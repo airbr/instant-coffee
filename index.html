@@ -132,7 +132,7 @@
     100% { top: 0; }
 }
 
-aside {
+aside, footer {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -177,6 +177,11 @@ details[open] summary {
 @supports (font-variation-settings: normal) {
   :root { font-family: InterVariable, sans-serif; }
 }
+
+* {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>☕</text></svg>")
+      16 0, auto;
+}
   </style>
 
 <!-- HTML in your document's head -->
@@ -187,12 +192,12 @@ details[open] summary {
 
 <body>
   <main hx-boost="true" hx-ext="preload">
+    <h1>Presenting the 3rd Annual...</h1>
     <a href="/instant-coffee.html" preload="preload:init" preload-images="true" alt="Click for the Coffee Crawl" aria-label="Click for the Coffee Crawl">
     <section id="demo" class="bounce repeatingStripes">
     </section>
     </a>
-    <h1>Presenting the 3rd Annual ☕ Bellingham Coffee Crawl ☕</h1>
-    <h2>☕ May 18 2024 ☕</h2>
+    <h2>Bellingham Coffee Crawl ☕ May 18 2024 ☕</h2>
   </main>
 </body>
 
