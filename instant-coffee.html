@@ -17,6 +17,167 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
   <style>
+        main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .instant-headline {
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+      font-size: large;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 100%;
+    }
+
+    .photos {
+      /* Prevent vertical gaps */
+      line-height: 0;
+      -webkit-column-count: 5;
+      -webkit-column-gap:   0px;
+      -moz-column-count:    5;
+      -moz-column-gap:      0px;
+      column-count:         5;
+      column-gap:           0px;
+      min-height: 100vh;
+      min-width: 100vw;  
+    }
+
+    .photos img {
+      /* Just in case there are inline attributes */
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    @media (max-width: 1000px) {
+      .photos {
+      -moz-column-count:    3;
+      -webkit-column-count: 3;
+      column-count:         3;
+      }
+    }
+    @media (max-width: 800px) {
+      .photos {
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:         2;
+      }
+    }
+    @media (max-width: 400px) {
+      .photos {
+      -moz-column-count:    1;
+      -webkit-column-count: 1;
+      column-count:         1;
+      }
+    }
+    .repeatingStripes {
+      box-shadow: 10px 5px 5px black;
+      width:  300px;
+      height: 300px;
+      border-radius: 150px;
+      background-image: repeating-radial-gradient(circle,
+        #FFCC00 0px,
+        #FFCC00 20px,
+        #FFF1BC 20px,
+        #FFF1BC 40px);
+    }
+    /* main {
+      background-image: url(img/mike-kenneally-TD4DBagg2wE-unsplash.jpg);
+      color: whitesmoke;
+    } */
+    .bounce {
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 0.5s infinite linear;
+  -o-animation: bounce 0.5s infinite linear;
+  -webkit-animation: bounce 0.5s infinite linear;
+  animation: bounce 0.5s infinite linear;
+}
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+aside, footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+aside.map {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/img/rizky-subagja-1k7TnX5GAww-unsplash.jpg);
+}
+body {
+  background-color: whitesmoke;
+}
+
+details {
+  background-color: whitesmoke;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
     #photos-wrapper {
       display: none;
     }
@@ -52,8 +213,11 @@
       <h3>Saturday May 18 2024</h3>
       <p>A relaxed and fun event, check in at whatever location you wish along the way!</p>
       <details>
-        <summary>More info</summary>
-        <p>A speed test of the 5 coffee shop websites!</p>
+        <summary>More info and rec's</summary>
+        <h3>Im having just 3 coffees! </h3>
+        <p>Avellino, Camber and Velo.</p>
+        <p>Im having just food at Cof& and Ashuri</p>
+        <p>Also, for fun, here is a speed test of the 5 coffee shop websites!</p>
         <img src="/img/coffee-comparison.gif" alt="A speed performance test of 5 coffeshops on the Bellingham Coffee Crawl list">
         <p>Me: <a href="https://Morganwebdev.com">https://Morganwebdev.com</a></p>
       </details>
