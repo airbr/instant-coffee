@@ -19,15 +19,12 @@
   <style>
         main {
       display: flex;
-      justify-content: center;
       align-items: center;
       min-height: 100vh;
       flex-direction: column;
-      text-align: center;
     }
 
     .instant-headline {
-      align-items: center;
       flex-direction: column;
       justify-content: center;
       display: flex;
@@ -191,9 +188,17 @@ details[open] summary {
       /* background: black; */
       /* color: white; */
     }
-    header {
+    @media (min-width: 425px) {
+      header {
+      text-align: left;
+      list-style-type: none;
+      }
+    }
+    @media (max-width: 425px) {
+      header {
       text-align: center;
       list-style-type: none;
+      }
     }
   </style>
 
